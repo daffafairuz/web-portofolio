@@ -13,6 +13,7 @@ use Filament\Resources\Resource;
 use Filament\Tables;
 use Filament\Tables\Columns\ImageColumn;
 use Filament\Tables\Columns\TextColumn;
+use Filament\Tables\Columns\ToggleColumn;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
@@ -66,8 +67,9 @@ class MainContentResource extends Resource
             TiptapEditor::make('description')
                 ->label('Description')
                 ->required()
-                ->columnSpan('full'), // Menyediakan kolom penuh untuk edito
+                ->columnSpan('full'),
             ]);
+
     }
 
     public static function table(Table $table): Table
@@ -78,6 +80,7 @@ class MainContentResource extends Resource
                 ->circular(),
                 TextColumn::make('name'),
                 TextColumn::make('occupation'),
+                ToggleColumn::make('is_active'),
             ])
             ->filters([
                 //
