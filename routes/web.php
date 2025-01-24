@@ -1,7 +1,6 @@
 <?php
 
+use App\Http\Controllers\MainContentController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', MainContentController::class) -> name('main_content.index');
