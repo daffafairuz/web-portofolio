@@ -1,14 +1,14 @@
 <?php
 
-namespace App\Filament\Resources\MainContentResource\Pages;
+namespace App\Filament\Resources\CurriculumVitaeResource\Pages;
 
-use App\Filament\Resources\MainContentResource;
+use App\Filament\Resources\CurriculumVitaeResource;
 use Filament\Actions;
 use Filament\Resources\Pages\EditRecord;
 
-class EditMainContent extends EditRecord
+class EditCurriculumVitae extends EditRecord
 {
-    protected static string $resource = MainContentResource::class;
+    protected static string $resource = CurriculumVitaeResource::class;
 
     protected function getHeaderActions(): array
     {
@@ -16,6 +16,7 @@ class EditMainContent extends EditRecord
             Actions\DeleteAction::make(),
         ];
     }
+
     protected function getRedirectUrl(): string
     {
         return static::getResource()::getUrl('index');

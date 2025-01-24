@@ -1,4 +1,4 @@
-{{-- @dd($main_content -> profile_photo) --}}
+{{-- @dd($cv -> title) --}}
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
@@ -23,9 +23,11 @@
                     <li><a href="#" class="text-black">Contact</a></li>
                 </ul>
                 <div class="w-1/3 flex justify-end">
-                    <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-                        <i class="bi bi-download"></i> Download my cv
-                    </button>
+                    <a href="{{ asset('storage/' . $cv->cv_pdf) }}"
+                        class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+                        download="cv.pdf">
+                         <i class="bi bi-download"></i> Download my CV
+                     </a>
                 </div>
             </nav>
 
