@@ -17,9 +17,7 @@
                 @include('partial.navbar')
             </nav>
             {{-- main content --}}
-            <div class="flex pt-20">
-                @yield('main')
-            </div>
+            @yield('main')
         </div>
 
         {{-- footer --}}
