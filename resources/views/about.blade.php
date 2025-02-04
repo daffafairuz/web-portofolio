@@ -36,15 +36,23 @@
                 <ul class=" inline-flex space-x-4 font-bold">
                     <li><button onclick="showCard('education')" class=" hover:underline">Education</button></li>
                     <li><button onclick="showCard('project')" class=" hover:underline">Project</button></li>
+                    <li><button onclick="showCard('organization')" class=" hover:underline">Organization</button></li>
                 </ul>
             </div>
-            <div class=" bg-black rounded-xl">
+            <div class=" bg-black rounded-xl font-semibold">
                 <div id="education" class=" p-2">
                     <h1 class=" font-bold text-center">Education</h1>
-                    <div class="grid grid-cols-2">
+                    <div class="grid grid-cols-3">
                         <div>
                             <ul>
-                                <li>SEKOLAHNYA</li>
+                                <li><i class="bi bi-backpack3"> Sdit apa</i></li>
+                                <li>1</li>
+                                <li>1</li>
+                            </ul>
+                        </div>
+                        <div class="flex justify-center">
+                            <ul>
+                                <li>Sekolah Dasar</li>
                                 <li>1</li>
                                 <li>1</li>
                             </ul>
@@ -61,6 +69,9 @@
                 <div id="project" class="hidden p-2">
                     ini adalah project
                 </div>
+                <div id="organization" class="hidden p-2">
+                    ini adalah organization
+                </div>
             </div>
         </div>
     </div>
@@ -68,9 +79,13 @@
         function showCard(card){
             document.getElementById('education').classList.add('hidden')
             document.getElementById('project').classList.add('hidden')
+            document.getElementById('organization').classList.add('hidden')
 
             if (card === 'education'){
                 document.getElementById('education').classList.remove('hidden')
+            }
+            else if(card === 'organization'){
+                document.getElementById('organization').classList.remove('hidden')
             }
             else{
                 document.getElementById('project').classList.remove('hidden')
